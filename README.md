@@ -1,0 +1,1 @@
+# jonash-minimal-spring-postgres-hibernate-example
