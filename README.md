@@ -13,7 +13,6 @@
 
 ## Set up application
 * Clone project
-* Build etc. (Running directly in e.g. Intellij IDE doesn't work, cause port 8080 is opened twice) 
-* And start .jar from target directory
+* Build / Run
 * Server should be accessible at http://localhost:8080
 * And a table based on hibernate and the employee entity ./src/main/java/jonash/group/EmployeeEntity should be created
