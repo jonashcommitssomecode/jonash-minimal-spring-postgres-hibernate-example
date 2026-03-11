@@ -13,6 +13,7 @@
 
 ## Set up application
 * Clone project
+* If necessary, set JDK in IDE after import
 * Build / Run
-* Server should be accessible at http://localhost:8080
-* And a table based on hibernate and the employee entity ./src/main/java/jonash/group/EmployeeEntity should be created
+* Table "employees" (based on ./src/main/java/jonash/group/EmployeeEntity) should be created
+* Call http://localhost:8080 and one row should be saved to db
