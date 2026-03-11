@@ -16,4 +16,4 @@
 * If necessary, set JDK in IDE after import
 * Build / Run
 * Table "employees" (based on ./src/main/java/jonash/group/EmployeeEntity) should be created
-* Call http://localhost:8080 and one row should be saved to db
+* Call http://localhost:8080 and one row should be saved to table "employees"
