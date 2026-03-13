@@ -1,7 +1,8 @@
 package jonash.group;
 
-import jakarta.persistence.*;
+import org.hibernate.annotations.Type;
 
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -12,6 +13,10 @@ public class EmployeeEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer someId;
 
+    @Lob
+    @Type(type = "org.hibernate.type.MaterializedBlobType")
+    private byte[] byteArray;
+
     private String someString;
 
     private Date someDate;
@@ -20,9 +25,10 @@ public class EmployeeEntity {
     // though it does not necessarily have to be public.
     private EmployeeEntity() {}
 
-    public EmployeeEntity(String someString, Date someDate) {
+    public EmployeeEntity(String someString, Date someDate, byte[] data) {
         this.someString = someString;
         this.someDate = someDate;
+        this.byteArray = data;
     }
 
     public Integer getSomeId() {
@@ -36,4 +42,9 @@ public class EmployeeEntity {
     public Date getSomeDate() {
         return this.someDate;
     }
+
+    public byte[] getSomeByte() {
+        return this.byteArray;
+    }
+
 }
